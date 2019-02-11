@@ -8,6 +8,13 @@
 		<title>sample16</title>
 		<script type="text/javascript" src="./jquery/jquery-1.9.0.js"></script>
 		<script type="text/javascript">
+		$(function(){
+			$("li[id]").css("color","red");
+			$("li[class]").css("color","blue");
+			
+			$('li[class="second"]').css("fontStyle","italic");
+			$('li[class!="second"]').css("textDecoration","underline");
+		});
 		</script>
 	</head>
 	<body style="overflow-y:scroll">

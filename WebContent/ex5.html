@@ -9,7 +9,11 @@
 		<script type="text/javascript" src="./jquery/jquery-1.9.0.js"></script>
 		<script type="text/javascript">
 		$(function(){
-			$(".red").css("color","red");
+			setTimeout(function(){
+				$(".red").css("color","red");
+				// 함수 체인
+				$(".blue").css("color","blue").html("<em>Hello jQuery</em>");
+			}, 500);
 		});
 		</script>
 	</head>

@@ -9,7 +9,12 @@
 		<script type="text/javascript" src="./jquery/jquery-1.9.0.js"></script>
 		<script type="text/javascript">
 		$(function(){
+			// css2
 			$("li:first-child").css("color","red");
+			$("li:last-child").css("color","blue");
+			
+			// css3 (인덱스는 1부터 시작)
+			$("li:nth-child(2)").css("color","green");
 		});
 		</script>
 	</head>
