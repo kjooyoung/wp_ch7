@@ -1,0 +1,49 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta charset="utf-8">
+<title>리스트를 이용한 메뉴 만들기</title>
+<link rel="stylesheet" type="text/css" href="css/tabbox.css"/>
+<script type="text/javascript" src="./jquery/jquery-1.9.0.js"></script>
+<script type="text/javascript">
+$(function(){
+	$("ul li").click(function(){
+		$(".selected").removeClass("selected");
+		$(this).addClass("selected");
+		var index = $("li").index(this);
+		$("p").css("display","none");
+		console.log(index);
+		$("p:nth-child("+(index+1)+")").css("display","block");
+	});
+});
+</script>
+</head>
+<body>
+<div class="tab-box">
+	<ul>
+        <li>메뉴 1</li>
+        <li>메뉴 2</li>
+        <li>메뉴 3</li>
+        <li>메뉴 4</li>
+        <li>메뉴 5</li>
+    </ul>
+    <div>
+    	<p>
+    		탭뷰1 입니다.
+    	</p>
+    	<p>
+    		탭뷰2 입니다.
+    	</p>
+    	<p>
+    		탭뷰3 입니다.
+    	</p>
+    	<p>
+    		탭뷰4 입니다.
+    	</p>
+    	<p>
+    		탭뷰5 입니다.
+    	</p>
+    </div>
+</div>    
+</body>
+</html>
