@@ -9,10 +9,9 @@
 $(function(){
 	$("ul li").click(function(){
 		$(".selected").removeClass("selected");
+		$("p").css("display","none");
 		$(this).addClass("selected");
 		var index = $("li").index(this);
-		$("p").css("display","none");
-		console.log(index);
 		$("p:nth-child("+(index+1)+")").css("display","block");
 	});
 });
